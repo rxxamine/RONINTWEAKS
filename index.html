@@ -9,9 +9,29 @@
     <meta property="og:description" content="Unlock your system's full potential with Ronin Tweaks: ultra-low latency, deep system debloating, custom power plans, and instant key activation." />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=ronin3" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=ronin3" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=ronin3" />
+    <link rel="shortcut icon" href="/favicon.ico?v=ronin3" />
+    <link rel="apple-touch-icon" href="/favicon-32x32.png?v=ronin3" />
+    <script>
+      (function() {
+        try {
+          var updateFavicon = function() {
+            var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+            link.type = 'image/svg+xml';
+            link.rel = 'shortcut icon';
+            link.href = '/favicon.svg?v=' + Date.now();
+            document.head.appendChild(link);
+          };
+          if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', updateFavicon);
+          } else {
+            updateFavicon();
+          }
+        } catch(e) {}
+      })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Rajdhani:wght@500;600;700;800&display=swap" rel="stylesheet">
