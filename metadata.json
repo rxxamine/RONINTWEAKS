@@ -1,0 +1,6 @@
+{
+  "name": "RoninTweaks Ultimate",
+  "description": "Unlock your system's full potential with RoninTweaks Ultimate: ultra-low latency, deep system debloating, custom power plans, and real-time dashboard.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

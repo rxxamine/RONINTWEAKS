@@ -1,0 +1,45 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile with activation status",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "email": { "type": "string" },
+        "displayName": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "isActivated": { "type": "boolean" },
+        "activeKey": { "type": "string" },
+        "hwid": { "type": "string" },
+        "activatedAt": { "type": "string" }
+      },
+      "required": ["id", "email"]
+    },
+    "LicenseKey": {
+      "title": "LicenseKey",
+      "description": "License keys generated and sent to customers",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "key": { "type": "string" },
+        "assignedEmail": { "type": "string" },
+        "isUsed": { "type": "boolean" },
+        "usedByUid": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "hwidBound": { "type": "string" }
+      },
+      "required": ["key", "isUsed"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "User profile documents"
+    },
+    "/license_keys/{keyId}": {
+      "schema": "LicenseKey",
+      "description": "Authorized license keys sent by admin"
+    }
+  }
+}
