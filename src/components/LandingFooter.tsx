@@ -1,4 +1,5 @@
 import React from 'react';
+import { RoninLogo } from './RoninLogo';
 
 interface LandingFooterProps {
   onOpenActivate: () => void;
@@ -127,14 +128,10 @@ export const LandingFooter: React.FC<LandingFooterProps> = ({
 
         {/* Bottom divider and Brand */}
         <div className="border-t border-neutral-900 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-2">
-            <div className="w-6 h-6 rounded-sm bg-[#FF1E27] flex items-center justify-center font-heading font-bold text-white text-xs">
-              R
-            </div>
-            <span className="font-heading font-bold tracking-widest text-sm text-white">
-              RONIN<span className="text-[#FF1E27]">TWEAKS</span>
-            </span>
-          </div>
+          <RoninLogo
+            size="md"
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          />
 
           <div className="flex items-center gap-6 text-xs text-neutral-400 font-sans">
             <span className="hover:text-neutral-300 cursor-pointer">Privacy Policy</span>

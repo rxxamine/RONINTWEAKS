@@ -1,6 +1,7 @@
 import React from 'react';
 import { ShieldCheck, Key, LogOut, KeyRound } from 'lucide-react';
 import { User as FirebaseUser } from 'firebase/auth';
+import { RoninLogo } from './RoninLogo';
 
 interface NavbarProps {
   onOpenActivate: () => void;
@@ -31,19 +32,12 @@ export const Navbar: React.FC<NavbarProps> = ({
   return (
     <header className="sticky top-0 z-50 w-full bg-[#070709]/90 backdrop-blur-md border-b border-neutral-900/80 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-6">
-        {/* Brand Zone */}
-        <button
+        {/* Brand Zone - Clean Logo matching user image */}
+        <RoninLogo
+          size="lg"
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="flex items-center gap-2 text-left group focus:outline-none"
-        >
-          <div className="w-8 h-8 rounded-sm bg-gradient-to-br from-[#FF1E27] to-[#B91C1C] flex items-center justify-center shadow-[0_0_15px_rgba(255,30,39,0.5)]">
-            <span className="font-heading font-black text-white text-lg tracking-wider">R</span>
-          </div>
-          <div className="flex items-baseline tracking-widest uppercase font-heading font-bold text-xl select-none">
-            <span className="text-white group-hover:text-neutral-200 transition-colors">RONIN</span>
-            <span className="text-[#FF1E27] drop-shadow-[0_0_8px_rgba(255,30,39,0.8)]">TWEAKS</span>
-          </div>
-        </button>
+          className="focus:outline-none"
+        />
 
         {/* Center Navigation Links */}
         <nav className="hidden md:flex items-center gap-8 font-heading text-sm font-semibold tracking-wider uppercase text-neutral-300">

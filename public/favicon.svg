@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="roninGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF383F" />
+      <stop offset="60%" stop-color="#FF1E27" />
+      <stop offset="100%" stop-color="#990E14" />
+    </linearGradient>
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Dark Obsidian Squircle -->
+  <rect width="64" height="64" rx="14" fill="#070709" />
+  <rect width="62" height="62" x="1" y="1" rx="13" fill="none" stroke="#FF1E27" stroke-width="1.5" stroke-opacity="0.4" />
+
+  <!-- Cyber Katana / Stylized Ronin "R" Mark -->
+  <g filter="url(#neonGlow)">
+    <!-- Vertical Spine Blade -->
+    <path d="M 17 12 L 25 12 L 25 52 L 17 52 Z" fill="url(#roninGrad)" />
+    
+    <!-- Upper Angular Bow of R -->
+    <path d="M 25 12 L 40 12 C 48 12 51 16 51 23 C 51 30 46 34 38 34 L 25 34 Z" fill="url(#roninGrad)" />
+    <!-- Cutout inner hole -->
+    <path d="M 25 19 L 37 19 C 41 19 43 20.5 43 23 C 43 25.5 41 27 37 27 L 25 27 Z" fill="#070709" />
+
+    <!-- Sharp Diagonal Katana Leg Slash -->
+    <path d="M 33 32 L 48 52 L 39 52 L 26 34 Z" fill="url(#roninGrad)" />
+    
+    <!-- Accent Katana Edge Highlight Slash -->
+    <path d="M 45 13 L 49 13 L 34 51 L 30 51 Z" fill="#FFFFFF" fill-opacity="0.18" />
+  </g>
+</svg>
