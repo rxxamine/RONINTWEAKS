@@ -174,11 +174,15 @@ export default function App() {
         onGoogleLogin={handleGoogleLogin}
       />
 
-      {/* Buy / Simplified Crypto & Card Payment Modal */}
+      {/* Buy / Simplified Crypto Payment Modal */}
       <BuyModal
         isOpen={isBuyOpen}
         onClose={() => setIsBuyOpen(false)}
         onPurchaseSuccess={handlePurchaseSuccess}
+        onOpenActivate={(key) => {
+          setLicenseKey(key);
+          setIsActivateOpen(true);
+        }}
       />
 
       {/* Admin Key Issuer Modal (Generate keys to send to customers) */}

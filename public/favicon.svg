@@ -1,34 +1,45 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
   <defs>
-    <linearGradient id="roninGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FF383F" />
+    <linearGradient id="favRedGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF4D54" />
       <stop offset="60%" stop-color="#FF1E27" />
-      <stop offset="100%" stop-color="#990E14" />
+      <stop offset="100%" stop-color="#8A0B10" />
     </linearGradient>
-    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="2" result="blur" />
+    <linearGradient id="favArmor" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E202B" />
+      <stop offset="100%" stop-color="#08080C" />
+    </linearGradient>
+    <filter id="favGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.5" result="blur" />
       <feComposite in="SourceGraphic" in2="blur" operator="over" />
     </filter>
   </defs>
 
-  <!-- Background Dark Obsidian Squircle -->
-  <rect width="64" height="64" rx="14" fill="#070709" />
-  <rect width="62" height="62" x="1" y="1" rx="13" fill="none" stroke="#FF1E27" stroke-width="1.5" stroke-opacity="0.4" />
+  <!-- Dark Obsidian Hexagonal Base -->
+  <polygon points="32,3 57,16 57,48 32,61 7,48 7,16" fill="url(#favArmor)" stroke="#FF1E27" stroke-width="1.8" />
+  <polygon points="32,6 54,18 54,46 32,58 10,46 10,18" fill="none" stroke="#FF1E27" stroke-width="0.75" stroke-opacity="0.4" />
 
-  <!-- Cyber Katana / Stylized Ronin "R" Mark -->
-  <g filter="url(#neonGlow)">
-    <!-- Vertical Spine Blade -->
-    <path d="M 17 12 L 25 12 L 25 52 L 17 52 Z" fill="url(#roninGrad)" />
-    
-    <!-- Upper Angular Bow of R -->
-    <path d="M 25 12 L 40 12 C 48 12 51 16 51 23 C 51 30 46 34 38 34 L 25 34 Z" fill="url(#roninGrad)" />
-    <!-- Cutout inner hole -->
-    <path d="M 25 19 L 37 19 C 41 19 43 20.5 43 23 C 43 25.5 41 27 37 27 L 25 27 Z" fill="#070709" />
+  <!-- Symmetrical Horns / Katana Crest -->
+  <path d="M 32 18 L 24 8 L 15 10 L 23 18 L 17 25 L 27 23 Z" fill="url(#favRedGrad)" />
+  <path d="M 32 18 L 40 8 L 49 10 L 41 18 L 47 25 L 37 23 Z" fill="url(#favRedGrad)" />
 
-    <!-- Sharp Diagonal Katana Leg Slash -->
-    <path d="M 33 32 L 48 52 L 39 52 L 26 34 Z" fill="url(#roninGrad)" />
-    
-    <!-- Accent Katana Edge Highlight Slash -->
-    <path d="M 45 13 L 49 13 L 34 51 L 30 51 Z" fill="#FFFFFF" fill-opacity="0.18" />
+  <!-- Center Forehead Plate -->
+  <path d="M 28 17 L 36 17 L 39 31 L 25 31 Z" fill="#0A0B0F" stroke="#FF1E27" stroke-width="1" />
+  <!-- 'R' Mark in Forehead -->
+  <path d="M 30 20 L 34 20 C 35.5 20 36 21 36 22.5 C 36 24 35.5 25 34 25 L 30 25 Z M 30 20 L 30 28 M 33 25 L 35.5 28" stroke="#FF1E27" stroke-width="1.2" stroke-linecap="round" />
+
+  <!-- Glowing Laser Visor Slits -->
+  <g filter="url(#favGlow)">
+    <polygon points="19,34 29,34 27,37 21,37" fill="#FF1E27" />
+    <polygon points="35,34 45,34 43,37 37,37" fill="#FF1E27" />
+    <polygon points="22,34.5 28,34.5 27,36 23,36" fill="#FFFFFF" opacity="0.9" />
+    <polygon points="36,34.5 42,34.5 41,36 37,36" fill="#FFFFFF" opacity="0.9" />
   </g>
+
+  <!-- Lower Faceplate & Grill -->
+  <polygon points="23,41 41,41 37,54 27,54" fill="url(#favArmor)" stroke="#FF1E27" stroke-width="1" />
+  <line x1="28" y1="44" x2="36" y2="44" stroke="#FF1E27" stroke-width="1" stroke-opacity="0.8" />
+  <line x1="29" y1="47" x2="35" y2="47" stroke="#FF1E27" stroke-width="1" stroke-opacity="0.8" />
+  <line x1="30" y1="50" x2="34" y2="50" stroke="#FF1E27" stroke-width="1" stroke-opacity="0.8" />
+  <polygon points="30,54 34,54 32,57" fill="url(#favRedGrad)" />
 </svg>

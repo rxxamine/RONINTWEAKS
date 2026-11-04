@@ -57,11 +57,11 @@ export const LandingFooter: React.FC<LandingFooterProps> = ({
             </h4>
             <ul className="space-y-2.5 text-xs text-neutral-400 font-sans">
               <li>
-                <span className="text-white font-medium">RoninTweaks Ultimate</span>
+                <span className="text-white font-medium">Ultimate Edition</span>
               </li>
               <li>
                 <span className="text-neutral-500 hover:text-neutral-400 transition-colors cursor-pointer">
-                  RoninTweaks LITE
+                  Lite Edition
                 </span>
               </li>
               <li>
@@ -138,7 +138,7 @@ export const LandingFooter: React.FC<LandingFooterProps> = ({
             <span aria-hidden="true">·</span>
             <span className="hover:text-neutral-300 cursor-pointer">Terms of Service</span>
             <span aria-hidden="true">·</span>
-            <span>&copy; 2026 RoninTweaks. All rights reserved.</span>
+            <span>&copy; 2026. All rights reserved.</span>
           </div>
         </div>
       </div>

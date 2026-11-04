@@ -109,7 +109,7 @@ export const ActivateModal: React.FC<ActivateModalProps> = ({
           </div>
           <div>
             <h3 className="font-heading font-black text-xl text-white tracking-wider uppercase">
-              ACTIVATE <span className="text-[#FF1E27] drop-shadow-[0_0_10px_rgba(255,30,39,0.8)]">RONINTWEAKS</span>
+              ACTIVATE <span className="text-[#FF1E27] drop-shadow-[0_0_10px_rgba(255,30,39,0.8)]">LICENSE KEY</span>
             </h3>
             <p className="text-xs text-neutral-400 font-sans">
               Google Account Authentication & Hardware Key Activation

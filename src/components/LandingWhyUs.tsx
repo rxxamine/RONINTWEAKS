@@ -32,7 +32,7 @@ export const LandingWhyUs: React.FC = () => {
         {/* Title */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="font-heading font-black text-3xl sm:text-5xl tracking-wider uppercase mb-3 text-white text-balance">
-            Why Choose <span className="text-[#FF1E27] drop-shadow-[0_0_20px_rgba(255,30,39,0.7)]">RoninTweaks Ultimate?</span>
+            Why Choose <span className="text-[#FF1E27] drop-shadow-[0_0_20px_rgba(255,30,39,0.7)]">Ultimate Edition?</span>
           </h2>
           <p className="text-neutral-400 text-base sm:text-lg font-sans">
             Engineered by competitive esports engineers for measurable hardware performance.
